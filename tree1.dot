@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="subscriber_count <= 6.442\ngini = 0.75\nsamples = 78560\nvalue = [19688, 19765, 19336, 19771]\nclass = NC", fillcolor="#d739e500"] ;
+1 [label="subscriber_count <= 4.069\ngini = 0.743\nsamples = 60479\nvalue = [16326, 14083, 11725, 18345]\nclass = NC", fillcolor="#d739e50c"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="subscriber_count <= 3.651\ngini = 0.674\nsamples = 15600\nvalue = [4478, 2525, 1484, 7113]\nclass = NC", fillcolor="#d739e53c"] ;
+1 -> 2 ;
+3 [label="gini = 0.643\nsamples = 9023\nvalue = [2453, 1286, 711, 4573]\nclass = NC", fillcolor="#d739e552"] ;
+2 -> 3 ;
+4 [label="gini = 0.707\nsamples = 6577\nvalue = [2025, 1239, 773, 2540]\nclass = NC", fillcolor="#d739e51d"] ;
+2 -> 4 ;
+5 [label="subscriber_count <= 5.001\ngini = 0.749\nsamples = 44879\nvalue = [11848, 11558, 10241, 11232]\nclass = 3G_BACKHAUL_CONGESTION", fillcolor="#e5813902"] ;
+1 -> 5 ;
+6 [label="gini = 0.745\nsamples = 18836\nvalue = [5199, 4643, 3653, 5341]\nclass = NC", fillcolor="#d739e503"] ;
+5 -> 6 ;
+7 [label="gini = 0.749\nsamples = 26043\nvalue = [6649, 6915, 6588, 5891]\nclass = 4G_BACKHAUL_CONGESTION", fillcolor="#47e53903"] ;
+5 -> 7 ;
+8 [label="subscriber_count <= 7.852\ngini = 0.683\nsamples = 18081\nvalue = [3362, 5682, 7611, 1426]\nclass = 4G_RAN_CONGESTION", fillcolor="#399de528"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="subscriber_count <= 7.166\ngini = 0.709\nsamples = 14411\nvalue = [3180, 4562, 5243, 1426]\nclass = 4G_RAN_CONGESTION", fillcolor="#399de512"] ;
+8 -> 9 ;
+10 [label="gini = 0.728\nsamples = 9076\nvalue = [2116, 2753, 2980, 1227]\nclass = 4G_RAN_CONGESTION", fillcolor="#399de509"] ;
+9 -> 10 ;
+11 [label="gini = 0.664\nsamples = 5335\nvalue = [1064, 1809, 2263, 199]\nclass = 4G_RAN_CONGESTION", fillcolor="#399de521"] ;
+9 -> 11 ;
+12 [label="subscriber_count <= 8.756\ngini = 0.488\nsamples = 3670\nvalue = [182, 1120, 2368, 0]\nclass = 4G_RAN_CONGESTION", fillcolor="#399de57d"] ;
+8 -> 12 ;
+13 [label="gini = 0.517\nsamples = 3124\nvalue = [182, 1052, 1890, 0]\nclass = 4G_RAN_CONGESTION", fillcolor="#399de567"] ;
+12 -> 13 ;
+14 [label="gini = 0.218\nsamples = 546\nvalue = [0, 68, 478, 0]\nclass = 4G_RAN_CONGESTION", fillcolor="#399de5db"] ;
+12 -> 14 ;
+}
